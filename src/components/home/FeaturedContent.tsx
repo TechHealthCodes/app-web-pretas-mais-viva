@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Play, BookOpen, Headphones, Calendar } from "lucide-react";
+import { Play, BookOpen, Headphones, Calendar, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface ContentItemProps {
@@ -14,21 +13,29 @@ interface ContentItemProps {
   date: string;
   duration?: string;
   link: string;
+  isYoutube?: boolean;
 }
 
-const ContentItem = ({ type, image, title, author, date, duration, link }: ContentItemProps) => {
+const ContentItem = ({ type, image, title, author, date, duration, link, isYoutube }: ContentItemProps) => {
   const typeIcons = {
-    video: <Play className="h-5 w-5" />,
+    video: isYoutube ? <Youtube className="h-5 w-5" /> : <Play className="h-5 w-5" />,
     article: <BookOpen className="h-5 w-5" />,
     podcast: <Headphones className="h-5 w-5" />,
     event: <Calendar className="h-5 w-5" />,
   };
 
   const typeLabels = {
-    video: "Vídeo",
+    video: isYoutube ? "YouTube" : "Vídeo",
     article: "Artigo",
     podcast: "Podcast",
     event: "Evento",
+  };
+
+  const handleVideoClick = (e: React.MouseEvent, youtubeLink: string) => {
+    if (isYoutube) {
+      e.preventDefault();
+      window.open(youtubeLink, '_blank');
+    }
   };
 
   return (
@@ -46,11 +53,19 @@ const ContentItem = ({ type, image, title, author, date, duration, link }: Conte
         )}
       </div>
       <CardContent className="p-4">
-        <Link to={link}>
-          <h3 className="font-bricolage font-semibold text-lg mb-2 hover:text-primary transition-colors">
-            {title}
-          </h3>
-        </Link>
+        {isYoutube ? (
+          <a href={link} onClick={(e) => handleVideoClick(e, link)} target="_blank" rel="noopener noreferrer">
+            <h3 className="font-bricolage font-semibold text-lg mb-2 hover:text-primary transition-colors">
+              {title}
+            </h3>
+          </a>
+        ) : (
+          <Link to={link}>
+            <h3 className="font-bricolage font-semibold text-lg mb-2 hover:text-primary transition-colors">
+              {title}
+            </h3>
+          </Link>
+        )}
         <div className="flex justify-between items-center text-sm text-muted-foreground">
           <span>{author}</span>
           <span>{date}</span>
@@ -65,30 +80,33 @@ const FeaturedContent = () => {
   const videos = [
     {
       type: "video" as const,
-      image: "https://images.unsplash.com/photo-1607868894064-2b6e7ed1b324",
+      image: "https://i.ytimg.com/vi/Mg1A1NoMJAU/maxresdefault.jpg",
       title: "Autocuidado e autoestima para mulheres negras",
-      author: "Dra. Maria Silva",
+      author: "Canal Preta & Gorda",
       date: "15 mai 2023",
       duration: "24:15",
-      link: "/conteudos/videos/1"
+      link: "https://www.youtube.com/watch?v=Mg1A1NoMJAU",
+      isYoutube: true
     },
     {
       type: "video" as const,
-      image: "https://images.unsplash.com/photo-1487528278747-ba99ed528ebc",
-      title: "Finanças pessoais: primeiros passos",
-      author: "Ana Oliveira",
+      image: "https://i.ytimg.com/vi/qWrs1QnZ3PY/maxresdefault.jpg",
+      title: "Finanças pessoais: primeiros passos para mulheres negras",
+      author: "Nath Finanças",
       date: "03 jun 2023",
       duration: "18:42",
-      link: "/conteudos/videos/2"
+      link: "https://www.youtube.com/watch?v=qWrs1QnZ3PY",
+      isYoutube: true
     },
     {
       type: "video" as const,
-      image: "https://images.unsplash.com/photo-1524601500432-1e1a4c71d692",
-      title: "Workshop de empreendedorismo feminino",
-      author: "Carla Mendes",
+      image: "https://i.ytimg.com/vi/pGun7N_cWgc/maxresdefault.jpg",
+      title: "Workshop de empreendedorismo feminino negro",
+      author: "PretaHub",
       date: "22 abr 2023",
       duration: "45:10",
-      link: "/conteudos/videos/3"
+      link: "https://www.youtube.com/watch?v=pGun7N_cWgc",
+      isYoutube: true
     }
   ];
   
