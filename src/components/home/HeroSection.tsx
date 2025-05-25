@@ -22,7 +22,7 @@ const HeroSection = () => {
                 </Button>
               </Link>
               <Link to="/conteudos">
-                <Button variant="outline" className="border-white text-white hover:bg-white/10 font-medium text-lg py-6 px-8">
+                <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-medium text-lg py-6 px-8">
                   Explorar conteúdo
                 </Button>
               </Link>
