@@ -38,7 +38,6 @@ const HeroSection = () => {
                   clipPath: "polygon(20% 0%, 100% 10%, 90% 100%, 0% 80%)"
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-[3rem] transform rotate-3 hover:rotate-0 transition-transform duration-300"></div>
               <div className="absolute bottom-6 left-6 right-6 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <h2 className="font-bricolage text-xl mb-2 font-semibold text-white">
                   Nossa Comunidade
