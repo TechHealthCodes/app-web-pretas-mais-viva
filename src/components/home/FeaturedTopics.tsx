@@ -7,24 +7,22 @@ import {
   DollarSign, 
   Users 
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 interface TopicCardProps {
   icon: React.ElementType;
   title: string;
   description: string;
-  link: string;
 }
 
-const TopicCard = ({ icon: Icon, title, description, link }: TopicCardProps) => {
+const TopicCard = ({ icon: Icon, title, description }: TopicCardProps) => {
   return (
-    <Link to={link} className="bg-white rounded-lg shadow-sm p-6 transition-all hover:shadow-md hover:-translate-y-1 group">
+    <div className="bg-white rounded-lg shadow-sm p-6 transition-all hover:shadow-md hover:-translate-y-1 group cursor-pointer">
       <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/20">
         <Icon className="h-6 w-6 text-primary" />
       </div>
       <h3 className="font-bricolage text-xl font-semibold mb-2 text-primary">{title}</h3>
       <p className="text-muted-foreground">{description}</p>
-    </Link>
+    </div>
   );
 };
 
@@ -33,38 +31,32 @@ const FeaturedTopics = () => {
     {
       icon: BrainCog,
       title: "Saúde Mental",
-      description: "Conteúdos sobre bem-estar emocional e psicológico para mulheres negras.",
-      link: "/topicos/saude-mental"
+      description: "Conteúdos sobre bem-estar emocional e psicológico para mulheres negras."
     },
     {
       icon: Sparkles,
       title: "Autocuidado",
-      description: "Dicas e práticas para cuidar de si mesma de forma holística.",
-      link: "/topicos/autocuidado"
+      description: "Dicas e práticas para cuidar de si mesma de forma holística."
     },
     {
       icon: DollarSign,
       title: "Finanças",
-      description: "Educação financeira e estratégias para prosperidade econômica.",
-      link: "/topicos/financas"
+      description: "Educação financeira e estratégias para prosperidade econômica."
     },
     {
       icon: HeartHandshake,
       title: "Empreendedorismo",
-      description: "Construa seu negócio com estratégias para mulheres negras.",
-      link: "/topicos/empreendedorismo"
+      description: "Construa seu negócio com estratégias para mulheres negras."
     },
     {
       icon: BookText,
       title: "Ancestralidade",
-      description: "Reconecte-se com suas raízes e história cultural.",
-      link: "/topicos/ancestralidade"
+      description: "Reconecte-se com suas raízes e história cultural."
     },
     {
       icon: Users,
       title: "Relacionamentos",
-      description: "Construindo relações saudáveis e empoderadas.",
-      link: "/topicos/relacionamentos"
+      description: "Construindo relações saudáveis e empoderadas."
     }
   ];
 
