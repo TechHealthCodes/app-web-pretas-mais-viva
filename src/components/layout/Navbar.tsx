@@ -40,7 +40,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/310e41c1-eb71-4740-b5b4-edf3176828d5.png" 
             alt="Pretas Mais Viva" 
-            className="h-12"
+            className="h-16"
           />
         </Link>
 
