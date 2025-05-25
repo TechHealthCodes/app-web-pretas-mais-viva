@@ -33,10 +33,9 @@ const HeroSection = () => {
               <img 
                 src="/lovable-uploads/a7631cb6-7ae1-4f94-8775-ace20df4f3db.png" 
                 alt="Mulheres negras em conexão e relacionamento" 
-                className="rounded-full shadow-2xl max-w-md w-full h-auto object-cover transform rotate-3 hover:rotate-0 transition-transform duration-300"
+                className="shadow-2xl max-w-md w-full h-auto object-cover transform rotate-3 hover:rotate-0 transition-transform duration-300"
                 style={{
-                  aspectRatio: "4/3",
-                  borderRadius: "50%"
+                  borderRadius: "60px 40px 80px 30px"
                 }}
               />
               <div className="absolute bottom-6 left-6 right-6 transform rotate-3 hover:rotate-0 transition-transform duration-300">
