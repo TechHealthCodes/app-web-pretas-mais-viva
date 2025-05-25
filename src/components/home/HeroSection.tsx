@@ -29,24 +29,20 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <div className="bg-secondary/20 p-6 rounded-lg w-full max-w-md">
-              <h2 className="font-bricolage text-2xl mb-4 font-semibold">Destaques</h2>
-              <div className="space-y-4">
-                {[1, 2, 3].map((item) => (
-                  <div key={item} className="bg-white/10 p-4 rounded-md hover:bg-white/20 transition-colors">
-                    <span className="text-xs font-medium bg-secondary px-2 py-1 rounded-full">Destaque</span>
-                    <h3 className="font-bricolage text-lg mt-2">Workshop de autocuidado para mulheres negras</h3>
-                    <p className="text-white/80 text-sm mt-1">
-                      Aprenda técnicas para incorporar o autocuidado no seu dia a dia.
-                    </p>
-                    <div className="mt-2 flex justify-between items-center">
-                      <span className="text-xs opacity-75">24 MAI</span>
-                      <Link to="/workshop/1" className="text-sm text-secondary hover:underline">
-                        Saiba mais
-                      </Link>
-                    </div>
-                  </div>
-                ))}
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
+                alt="Mulheres negras em conexão e relacionamento" 
+                className="rounded-lg shadow-lg max-w-md w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h2 className="font-bricolage text-xl mb-2 font-semibold text-white">
+                  Nossa Comunidade
+                </h2>
+                <p className="text-white/90 text-sm">
+                  Conectando mulheres negras em um espaço de apoio, crescimento e empoderamento mútuo.
+                </p>
               </div>
             </div>
           </div>
