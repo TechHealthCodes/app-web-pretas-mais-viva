@@ -31,12 +31,15 @@ const HeroSection = () => {
           <div className="md:w-1/2 flex justify-center">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
+                src="/lovable-uploads/a7631cb6-7ae1-4f94-8775-ace20df4f3db.png" 
                 alt="Mulheres negras em conexão e relacionamento" 
-                className="rounded-lg shadow-lg max-w-md w-full h-auto object-cover"
+                className="rounded-[3rem] shadow-2xl max-w-md w-full h-auto object-cover transform rotate-3 hover:rotate-0 transition-transform duration-300"
+                style={{
+                  clipPath: "polygon(20% 0%, 100% 10%, 90% 100%, 0% 80%)"
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg"></div>
-              <div className="absolute bottom-4 left-4 right-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-[3rem] transform rotate-3 hover:rotate-0 transition-transform duration-300"></div>
+              <div className="absolute bottom-6 left-6 right-6 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <h2 className="font-bricolage text-xl mb-2 font-semibold text-white">
                   Nossa Comunidade
                 </h2>
