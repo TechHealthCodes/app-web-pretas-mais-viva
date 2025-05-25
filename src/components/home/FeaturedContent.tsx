@@ -46,7 +46,7 @@ const ContentItem = ({ type, image, title, author, date, duration, link }: Conte
         )}
       </div>
       <CardContent className="p-4">
-        <Link to={link}>
+        <Link to="/dashboard">
           <h3 className="font-bricolage font-semibold text-lg mb-2 hover:text-primary transition-colors">
             {title}
           </h3>
@@ -70,7 +70,7 @@ const FeaturedContent = () => {
       author: "Dra. Maria Silva",
       date: "15 mai 2023",
       duration: "24:15",
-      link: "/conteudos/videos/1"
+      link: "/dashboard"
     },
     {
       type: "video" as const,
@@ -79,7 +79,7 @@ const FeaturedContent = () => {
       author: "Ana Oliveira",
       date: "03 jun 2023",
       duration: "18:42",
-      link: "/conteudos/videos/2"
+      link: "/dashboard"
     },
     {
       type: "video" as const,
@@ -88,7 +88,7 @@ const FeaturedContent = () => {
       author: "Carla Mendes",
       date: "22 abr 2023",
       duration: "45:10",
-      link: "/conteudos/videos/3"
+      link: "/dashboard"
     }
   ];
   
@@ -99,7 +99,7 @@ const FeaturedContent = () => {
       title: "A importância da saúde mental para mulheres negras",
       author: "Fernanda Santos",
       date: "10 jun 2023",
-      link: "/conteudos/artigos/1"
+      link: "/dashboard"
     },
     {
       type: "article" as const,
@@ -107,7 +107,7 @@ const FeaturedContent = () => {
       title: "Ancestralidade e identidade: reconectando com nossas raízes",
       author: "Juliana Lima",
       date: "28 mai 2023",
-      link: "/conteudos/artigos/2"
+      link: "/dashboard"
     },
     {
       type: "article" as const,
@@ -115,7 +115,7 @@ const FeaturedContent = () => {
       title: "Maternidade negra: desafios e potências",
       author: "Regina Sousa",
       date: "05 mai 2023",
-      link: "/conteudos/artigos/3"
+      link: "/dashboard"
     }
   ];
   
@@ -127,7 +127,7 @@ const FeaturedContent = () => {
       author: "Laura Castro",
       date: "20 jun 2023",
       duration: "38:27",
-      link: "/conteudos/podcasts/1"
+      link: "/dashboard"
     },
     {
       type: "podcast" as const,
@@ -136,7 +136,7 @@ const FeaturedContent = () => {
       author: "Dra. Camila Rocha",
       date: "12 jun 2023",
       duration: "42:15",
-      link: "/conteudos/podcasts/2"
+      link: "/dashboard"
     },
     {
       type: "podcast" as const,
@@ -145,7 +145,7 @@ const FeaturedContent = () => {
       author: "Patrícia Gomes",
       date: "01 jun 2023",
       duration: "35:08",
-      link: "/conteudos/podcasts/3"
+      link: "/dashboard"
     }
   ];
   
@@ -156,7 +156,7 @@ const FeaturedContent = () => {
       title: "Roda de conversa: autocuidado e práticas ancestrais",
       author: "Coletivo Afromulher",
       date: "25 jun 2023",
-      link: "/eventos/1"
+      link: "/dashboard"
     },
     {
       type: "event" as const,
@@ -164,7 +164,7 @@ const FeaturedContent = () => {
       title: "Workshop: Finanças para empreendedoras negras",
       author: "Instituto Mulheres Negras",
       date: "02 jul 2023",
-      link: "/eventos/2"
+      link: "/dashboard"
     },
     {
       type: "event" as const,
@@ -172,7 +172,7 @@ const FeaturedContent = () => {
       title: "Encontro de mentoria: desenvolvimento profissional",
       author: "Rede Empoderadas",
       date: "15 jul 2023",
-      link: "/eventos/3"
+      link: "/dashboard"
     }
   ];
 
@@ -230,7 +230,7 @@ const FeaturedContent = () => {
         </Tabs>
         
         <div className="text-center mt-10">
-          <Link to="/conteudos">
+          <Link to="/dashboard">
             <Button className="bg-primary text-white hover:bg-primary/90">
               Ver todos os conteúdos
             </Button>

@@ -32,7 +32,7 @@ const CommunitySection = () => {
               </div>
             </div>
             
-            <Link to="/comunidade">
+            <Link to="/dashboard">
               <Button className="bg-primary hover:bg-primary/90 text-white">
                 Participar da comunidade
               </Button>
@@ -65,7 +65,7 @@ const CommunitySection = () => {
               </div>
               
               <div className="mt-4 text-center">
-                <Link to="/comunidade" className="text-primary hover:text-primary/80 font-medium inline-flex items-center">
+                <Link to="/dashboard" className="text-primary hover:text-primary/80 font-medium inline-flex items-center">
                   Ver mais tópicos da comunidade
                 </Link>
               </div>

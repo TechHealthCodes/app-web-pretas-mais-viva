@@ -16,12 +16,12 @@ const HeroSection = () => {
               e fortalecer nossa comunidade.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/signup">
+              <Link to="/dashboard">
                 <Button className="bg-white text-primary hover:bg-secondary hover:text-white font-medium text-lg py-6 px-8">
                   Começar agora
                 </Button>
               </Link>
-              <Link to="/conteudos">
+              <Link to="/dashboard">
                 <Button variant="outline" className="border-2 border-white text-white bg-transparent hover:bg-white hover:text-primary font-medium text-lg py-6 px-8">
                   Explorar conteúdo
                 </Button>

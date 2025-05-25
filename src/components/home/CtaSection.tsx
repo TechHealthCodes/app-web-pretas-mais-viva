@@ -13,12 +13,12 @@ const CtaSection = () => {
           Faça parte de um espaço de acolhimento, conhecimento e fortalecimento para mulheres negras.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/signup">
+          <Link to="/dashboard">
             <Button className="bg-white text-primary hover:bg-secondary hover:text-white text-lg py-6 px-8">
               Cadastre-se gratuitamente
             </Button>
           </Link>
-          <Link to="/sobre">
+          <Link to="/dashboard">
             <Button variant="outline" className="border-white text-white hover:bg-white/10 text-lg py-6 px-8">
               Saiba mais
             </Button>
