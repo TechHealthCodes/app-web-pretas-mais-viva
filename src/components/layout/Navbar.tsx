@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -98,7 +99,7 @@ const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/comunidade">
+                <Link to="/dashboard">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <span className="flex items-center gap-1">
                       <Users className="h-4 w-4" />
@@ -109,7 +110,7 @@ const Navbar = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link to="/eventos">
+                <Link to="/dashboard">
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <span className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
@@ -186,12 +187,12 @@ const Navbar = () => {
               Conteúdos
             </Link>
             
-            <Link to="/comunidade" className="flex items-center gap-2 text-primary font-medium py-2" onClick={toggleMobileMenu}>
+            <Link to="/dashboard" className="flex items-center gap-2 text-primary font-medium py-2" onClick={toggleMobileMenu}>
               <Users className="h-5 w-5" />
               Comunidade
             </Link>
             
-            <Link to="/eventos" className="flex items-center gap-2 text-primary font-medium py-2" onClick={toggleMobileMenu}>
+            <Link to="/dashboard" className="flex items-center gap-2 text-primary font-medium py-2" onClick={toggleMobileMenu}>
               <Calendar className="h-5 w-5" />
               Eventos
             </Link>
